@@ -1,0 +1,93 @@
+#to-do-container {
+  width: 100%;
+  .to-do-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .header {
+      width: 50%;
+      h2 {
+        font-size: 36px;
+        color: #ffff;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      .header-content {
+        padding-top: 80px;
+        display: flex;
+        flex-direction: column;
+        form {
+          display: flex;
+          column-gap: 10px;
+          input {
+            padding: 15px;
+            width: 100%;
+            outline: none;
+            border: none;
+            background-color: #00000054;
+            color: #fff;
+          }
+          button {
+            width: 200px;
+            background-image: linear-gradient(
+              144deg,
+              #af40ff,
+              #5b42f3 50%,
+              #00ddeb
+            );
+            border: none;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            color: #ffffff;
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+            padding: 8px;
+            cursor: pointer;
+            &:hover {
+              background-color: rgb(5, 6, 45);
+              transition: 1s;
+              background-image: none;
+            }
+          }
+        }
+      }
+    }
+    .tasks-content {
+      width: 50%;
+      padding-top: 50px;
+      .content {
+        .card {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: none;
+          background-color: #00000054;
+          padding: 0 10px;
+          margin-bottom: 10px;
+          color: #fff;
+          .actions {
+            display: flex;
+            column-gap: 20px;
+            svg {
+              font-size: 20px;
+              &:first-child {
+                color: rgb(105, 2, 2);
+              }
+              &:last-child {
+                color: rgb(2, 90, 2);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 991px) {
+      .header,
+      .tasks-content {
+        width: 100%;
+      }
+    }
+  }
+}
